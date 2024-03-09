@@ -1,0 +1,314 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+section{
+  margin-top: 60px;
+}
+button{
+  background-color: #c28376;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 20px;
+  padding-block: 7px;
+  padding-inline: 15px;
+}
+.button{
+  background-color: #c28376;
+  color: white;
+  font-size: 18px;
+  border: none;
+  text-decoration: none;
+  border-radius: 20px;
+  padding-block: 7px;
+  padding-inline: 15px;
+}
+.social-icons{
+  margin-block: 20px;
+}
+.social-icons a{
+  color: black;
+  padding: 10px;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+/* Navbar styles */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+.navbar {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0 3px 8px rgba(13, 10, 10, 0.1);
+}
+.navbar p{
+  margin: 0;
+}
+.logo {
+  color: black;
+  font-size: 18px;
+  padding-left: 8%;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 50px;
+}
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+/* Home section styles */
+.home-section {
+  padding: 20px;
+  text-align: center;
+}
+.home-content {
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.home-image {
+  padding: 30px;
+  width: 370px;
+  height: 400px;
+  border-radius: 40%;
+  border-top: solid 2px orangered;
+  border-bottom: solid 2px orangered;
+  margin-top: 30px;
+}
+.home-heading {
+  width: 50%;
+  text-align: left;
+  color: black;
+  align-items: center;
+  justify-content: center;
+}
+.home-heading h1{
+  font-size: 70px;
+  margin-bottom: 0;
+}
+.home-heading h1 span{
+  color: #c45e4a;
+}
+.home-heading p{
+  font-size: 18px;
+}
+
+/* about section styles */
+.about-section {
+  padding: 20px;
+}
+.about-content {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 60px;
+}
+.about-image {
+  padding: 30px;
+  width: 370px;
+  height: 400px;
+  border-radius: 40%;
+  border-top: solid 2px orangered;
+  border-bottom: solid 2px orangered;
+  margin-top: 30px;
+}
+.about-heading {
+  width: 50%;
+  color: black;
+  align-items: center;
+  justify-content: center;
+}
+.about-heading h1{
+  text-align: center;
+  font-size: 70px;
+  margin-bottom: 0;
+}
+.about-heading p{
+  text-align: left;
+  font-size: 18px;
+}
+
+/*projects section*/
+.projects{
+  margin-top: 40px;
+}
+.projects .heading{
+  text-align: center;
+}
+.projects .heading h1{
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 80px;
+  margin-bottom: 10px;
+}
+.projects .heading p{
+  font-size: 20px;
+  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: italic;
+}
+.project-button {
+  background-color: #c28376;
+  border: solid 2px #c28376;
+  color: white;
+  transition: background-color 0.5s ease;
+}
+.project-button:hover {
+  background-color: #c28376;
+  color: white;
+}
+.projects-container {
+  margin-inline: 10%;
+  margin-block: 35px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.projects-container .card {
+  margin-inline: 10px;
+  position: relative;
+  width: 260px;
+  max-width: calc(25% - 20px); 
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.projects-container .card img {
+  width: 100%;
+  height: 300px;
+  border-bottom: 1px solid #ddd;
+  transition: transform 0.3s
+}
+.projects-container .card:hover img{
+  transform: scale(1.1);
+}
+.card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+  overflow: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+.projects-container .card:hover .card-content {
+  opacity: 1;
+}
+.card-content h3{
+  font-size: 20px;
+  padding: 10px 10px 0 10px;
+  text-align: center;
+}
+.card-content p {
+  font-size: 16px;
+  padding: 10px 10px 0 10px;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  overflow: auto; 
+}
+.popup-content {
+  background-color: #fff;
+  padding: 30px 90px 30px 90px;
+  max-width: 70%;
+  max-height:76%;
+  top: 30px;
+  text-align: center;
+  overflow-y: auto;
+  position: relative;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 38px;
+  color: black;
+  border: none;
+  background: transparent;
+}
+.popup img {
+  max-width: 350px;
+  max-height: 300px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.popup h3 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+.popup-descrition h2{
+  font-size: 10px; 
+}
+.popup-description img{
+  display: block;
+  margin: 0 auto;
+}
+.popup-description p{
+  font-size: 18px;
+}
+.popup-description p a{
+  text-decoration: none;
+}
+.popup-description span{
+  font-size: 18px;
+}
+.popup-description span a{
+  text-decoration: none;
+}
+
+/*footer section*/
+footer{
+  background-color: rgb(4, 3, 12);
+  text-align: center;
+  color: white;
+  padding: 50px;
+} 
+footer h2{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+.social-icons{
+  margin-block: 20px;
+}
+.social-icons a{
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+  text-decoration: none;
+}
